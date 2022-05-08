@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hong Kong Home Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <vid class="video-background">
+        <div class="video-foreground">
+            <iframe src="https://www.youtube.com/embed/gYO1uk7vIcc?autoplay=1&loop=1&mute=1&modestbranding=1&playlist=gYO1uk7vIcc&end=161"
+            frameborder="0" allowfullscreen></iframe>
+        </div>
+    </vid>
+
+    <form class="form">
+        <h1>How expensive are Hong Kong homes?</h1>
+        <h2>Saleable area (square feet)</h2>
+        <input class="area" type="number" id="uiArea" name="Area" value="500">
+        <h2>Market type</h2>
+        <div class="market" id="uiMarket">
+            <input type="radio" id="ui1stHand" name="Market" value="1st_hand" checked />
+            <label for="ui1stHand">1st hand</label>
+            <input type="radio" id="ui2ndHand" name="Market" value="2nd_hand" />
+            <label for="ui2ndHand">2nd hand</label>
+        </div>
+        <h2>District</h2>
+        <div>
+            <select class="district" id="uiDistricts" name="District">
+                <option value="" disabled="disabled" selected="selected">Choose a district</option>
+
+            </select>
+        </div>
+        <button class="estimate" type="button" onClick="onClickEstimatePrice()">Estimate Price</button>
+        <div id="uiEstimatedPrice" class="result">
+            <h2></h2>
+        </div>
+    </form>
+</body>
+
+</html>
